@@ -1,0 +1,155 @@
+/* general styles */
+.center{
+    margin: auto;
+}
+/* colors used */
+:root {
+    --text-color: white;
+    --bg-color: black;
+    --font-playfair:"Playfair Display", serif;
+}
+
+
+/* Header bg img */
+header{
+    background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://miro.medium.com/v2/resize:fit:1100/format:webp/1*mTzs13LI_ENZ5UbHdK3QXw.jpeg);
+
+    height:70vh;
+    background-size: cover;
+    width:100%;
+
+    margin-top: 0px;
+}
+
+/* navbar  */
+.border{
+    border: 5px solid aqua;
+}
+.border-black{
+    border: 1px solid var(--bg-color);;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 15vh;
+    width: 60%;
+    background-color: rgba(0, 0, 0, 0.539);
+    margin:5% auto;
+    border-radius: 5px;
+    flex-wrap: wrap;
+}
+.logo{
+    width:70px;
+    height:70px;
+    mix-blend-mode:exclusion;
+}
+.left{
+    margin-left: 10px;
+    margin-right: 300px;
+}
+.nav-item a{
+    color: var(--text-color);
+    font-family: var(--font-playfair);
+}
+
+/* headline */
+.headline{
+    width:fit-content;
+    color: var(--text-color);
+    font-family: var(--font-playfair);
+    font-size: 200%;
+}
+
+/* About Section */
+    /*grid container*/
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3,33%);
+        grid-template-rows: 1;
+        justify-items: center;
+        justify-content: space-between;
+    }
+    .inherit-w-h{
+        width: inherit;
+        height:inherit;
+    }
+    #about{
+        width:90%;
+        height:80vh;
+        margin: 10% auto;
+    }
+    .about-text-div{
+        font-family: var(--font-playfair);
+        text-align: left;
+        display: grid;
+        place-items: center;
+
+    }
+    .inline-block{
+        display: inline-block;
+        font-size:medium;
+    }
+
+    .spaced{
+        letter-spacing: 10px;
+    }
+
+/* Gallery Section */
+
+.gallery-title-container{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    font-family: var(--font-playfair);
+}
+
+.gallery-grid-container{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(2, 40%);
+    justify-content: space-around;
+    align-items: end;
+    height: 90%;
+    grid-gap: 10% 3%;
+    font-family: var(--font-playfair);
+}
+
+
+#gallery{
+    width:90%;
+    height:110vh;
+    margin: 10% auto;
+}
+.galley-grid-child{
+    height:100%;
+    align-content: end;
+    background-image: url(https://i.pinimg.com/564x/c2/92/5f/c2925fef0498e251fed495ceef9f809c.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.width-80{
+    width: 80%;
+}
+.Load-more-button{
+    margin: auto;
+    text-align: center;
+    margin: 5% auto;
+}
+
+/* footer styling */
+footer{
+    background-color: #f9f9f9;
+    height: 50vh;
+    width:100%;
+    font-family: var(--font-playfair);
+    margin-top: 20%;
+}
+.inline{
+    display: inline;
+    height:fit-content;
+    width:fit-content;
+}
