@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keyword" content="languages, learning, rabbitly">
 
+    <!-- aos link -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
     <!-- stylesheet link -->
     <link rel="stylesheet" href="./STYLE/style.css">
 
@@ -28,6 +33,9 @@
     <title>Image Gallery</title>
 </head>
 <body>
+    <script>
+        AOS.init();
+    </script>
     
     <header id="home" class="border-black">
         <!-- Navbar with a black bg + opacity 0.5 -->
@@ -63,7 +71,6 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link">
-                        <!-- <input type="search" name="search" id="search"> -->
                         <i class="fa-solid fa-magnifying-glass">
                         </i>
                     </a>
@@ -83,7 +90,7 @@
     </header>
 
     <!-- About Section -->
-    <section id="about" class="grid">
+    <section id="about" class="grid" data-aos="fade-up" data-aos-duration="1500">
         
         <div class="about-text-div about-grid-child inherit-w-h">
             <div>
@@ -93,16 +100,13 @@
                 <p class="my-4">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore sequi aspernatur, quas doloribus temporibus possimus ipsam quos consequatur quis dolorum quo laudantium mollitia debitis earum sapiente porro error dolore pariatur.
                 </p>
-                <!-- <button>
-                    <a href="">
-                        View More
-                    </a>
-                </button> -->
-                <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
-                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-sm group-hover:bg-opacity-0">
-                        View More
-                    </span>
-                </button>
+               <a href="">
+                    <button class="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
+                        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-sm group-hover:bg-opacity-0 moreBtn">
+                            View More
+                        </span>
+                    </button>
+                </a>
 
                     
 
@@ -141,9 +145,9 @@
     </section>
 
     <!-- Gallery Section -->
-     <section id="gallery" class="">
+    <section id="gallery" class="" >
         <!-- line-title-line part using grid -->
-        <div class="gallery-title-container">
+        <div class="gallery-title-container"   data-aos="fade-up" data-aos-duration="1500">
             <div class="">
                 <hr  class="border border-dark border-2">
             </div>
@@ -158,11 +162,27 @@
             </div>
         </div>
 
+        <!-- Carousel div -->
+        <div id="carousel"   data-aos="fade-up" data-aos-duration="1500">
+            <button>
+                <i class="fa-solid fa-caret-left inline-block" onclick="displayPre()"></i>
+            </button>
+
+            <img id="carouselImg" src="https://freewalkingtoursbordeaux.com/wp-content/uploads/2023/07/bordeaux-natural-history-museum.jpg" alt="" class="inline-block">
+            
+            <button class="">
+                <i class="fa-solid fa-caret-right inline-block " onclick="displayNext()"></i>
+            </button>
+
+            
+        </div>
+
         <!-- Gallery Contents -->
         <div class="gallery-grid-container my-4">
-            <div class="galley-grid-child ">
-                <div class="bg-white width-80">
-                    <p class="date"></p>
+
+            <div class="galley-grid-child "   data-aos="fade-up" data-aos-duration="1500">
+                <div class="bg-white width-80 galleryPiece">
+                   
                     <h3 class="p-2 fs-5">Piece Title</h3>
                     <div class="gallery-title-container">
                         <div class="">
@@ -184,9 +204,9 @@
                 </div>
                 
             </div>
-            <div class="galley-grid-child ">
+            <div class="galley-grid-child "   data-aos="fade-up" data-aos-duration="1500">
                 <div class="bg-white width-80">
-                    <p class="date"></p>
+                    
                     <h3 class="p-2 fs-5">Piece Title</h3>
                     <div class="gallery-title-container">
                         <div class="">
@@ -195,7 +215,7 @@
                         
                         <div class="mx-5">
                             <p class="">
-                                <a href="">
+                                <a  class="viewMoreBtn"href="">
                                     view more
                                 </a>
                             </p>
@@ -208,9 +228,9 @@
                 </div>
                 
             </div>
-            <div class="galley-grid-child ">
+            <div class="galley-grid-child "  data-aos="fade-up" data-aos-duration="1500">
                 <div class="bg-white width-80">
-                    <p class="date"></p>
+                   
                     <h3 class="p-2 fs-5">Piece Title</h3>
                     <div class="gallery-title-container">
                         <div class="">
@@ -219,7 +239,7 @@
                         
                         <div class="mx-5">
                             <p>
-                                <a href="">
+                                <a  class="viewMoreBtn" href="">
                                     view more
                                 </a>
                             </p>
@@ -232,9 +252,9 @@
                 </div>
                 
             </div>
-            <div class="galley-grid-child ">
+            <div class="galley-grid-child "   data-aos="fade-up" data-aos-duration="1500">
                 <div class="bg-white width-80">
-                    <p class="date"></p>
+                   
                     <h3 class="p-2 fs-5">Piece Title</h3>
                     <div class="gallery-title-container">
                         <div class="">
@@ -243,7 +263,7 @@
                         
                         <div class="mx-5">
                             <p>
-                                <a href="">
+                                <a class="viewMoreBtn" href="">
                                     view more
                                 </a>
                             </p>
@@ -256,9 +276,9 @@
                 </div>
                 
             </div>
-            <div class="galley-grid-child ">
+            <div class="galley-grid-child "   data-aos="fade-up" data-aos-duration="1500">
                 <div class="bg-white width-80">
-                    <p class="date"></p>
+                    
                     <h3 class="p-2 fs-5">Piece Title</h3>
                     <div class="gallery-title-container">
                         <div class="">
@@ -267,7 +287,7 @@
                         
                         <div class="mx-5">
                             <p>
-                                <a href="">
+                                <a class="viewMoreBtn" href="">
                                     view more
                                 </a>
                             </p>
@@ -280,9 +300,9 @@
                 </div>
                 
             </div>
-            <div class="galley-grid-child">
+            <div class="galley-grid-child"   data-aos="fade-up" data-aos-duration="1500">
                 <div class="bg-white width-80">
-                    <p class="date"></p>
+                    
                     <h3 class="p-2 fs-5">Piece Title</h3>
                     <div class="gallery-title-container">
                         <div class="">
@@ -307,15 +327,14 @@
 
         </div>
 
-        <div class="Load-more-button">
-            <button class="relative inline-flex items-center justify-center p-0.5 mb-5 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
-                <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-sm group-hover:bg-opacity-0">
-                    <a href="">
+        <div class="Load-more-button"   data-aos="fade-up" data-aos-duration="1500">
+            <a class="" href="">
+                <button class="relative inline-flex items-center justify-center p-0.5 mb-5 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 dark:text-white">
+                    <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-sm moreBtn">
                         Load More
-                    </a>
-                   
-                </span>
-            </button>
+                    </span>
+                </button>
+            </a>
 
         </div>
           
@@ -323,7 +342,7 @@
 
     <!-- footer -->
 
-    <footer id="contact" class="">
+    <footer id="contact" class=""   data-aos="fade-up" data-aos-duration="1500">
         <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
             <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
@@ -441,5 +460,7 @@
 
 <!-- Tailwind CSS Link-->
 <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+<script src="./JS/js.js"></script>
 </body>
 </html>
