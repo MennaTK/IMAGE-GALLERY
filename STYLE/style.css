@@ -31,9 +31,7 @@ header{
 }
 
 /* navbar  */
-.border{
-    border: 5px solid aqua;
-}
+
 .border-black{
     border: 1px solid var(--bg-color);;
 }
@@ -210,4 +208,60 @@ footer{
 #carousel i:hover{
 
     color: black;
+}
+
+/* RESPONISIVENESS */
+
+@media only screen and (max-width:1250px){
+    nav{
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+    
+    #gallery{
+        width:90%;
+        height:110vh;
+        margin: 40% auto;
+    }
+    footer{
+
+        margin-top: 150%;
+    }
+    #carousel img{
+        width:70%;
+    }
+    nav{
+        display: flex;
+        justify-content: flex-end;
+        height: 40vh;
+        width: 20%;
+        margin:5%;
+        flex-wrap: nowrap;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+  
+    footer{
+        margin-top: 110%;
+    }
+    #carousel img{
+        width:70%;
+    }
+    nav{
+        justify-content: center;
+        height: 30vh;
+    }
+
+    .left{
+        margin-left: 10%;
+        margin-right: 12%;
+    }
+
+
+
 }
